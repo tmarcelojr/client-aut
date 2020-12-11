@@ -16,7 +16,8 @@ function App() {
     fetch('https://backend-auth.herokuapp.com/register', {
       method: 'POST',
       credentials: 'include',
-      body: JSON.stringify(user)
+      body: JSON.stringify(user),
+      headers: { "Content-Type": "application/json" }
     })
       .then(res => res.json())
       .then(data => console.log(data))
