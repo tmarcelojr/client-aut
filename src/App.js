@@ -13,7 +13,7 @@ function App() {
       username: registerUsername,
       password: registerPassword
     }
-    fetch('http://localhost:8080/register', {
+    fetch('https://backend-auth.herokuapp.com/register', {
       method: 'POST',
       body: JSON.stringify(user),
       headers: { "Content-Type": "application/json" }
@@ -27,7 +27,7 @@ function App() {
       username: loginUsername,
       password: loginPassword
     }
-    fetch('http://localhost:8080/login', {
+    fetch('https://backend-auth.herokuapp.com/login', {
       method: 'POST',
       body: JSON.stringify(user),
       headers: { "Content-Type": "application/json" }
@@ -40,7 +40,7 @@ function App() {
   }
 
   const getUser = () => {
-    fetch('http://localhost:8080/getUser', {
+    fetch('https://backend-auth.herokuapp.com/getUser', {
       credentials: 'include'
     })
       .then(res => console.log(res))
