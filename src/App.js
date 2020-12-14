@@ -19,8 +19,9 @@ function App() {
       body: JSON.stringify(user),
       headers: { "Content-Type": "application/json" }
     })
-      .then(res => res.json())
-      .then(data => console.log(data))
+      .then(res => console.log(res))
+      // .then(res => res.json())
+      // .then(data => console.log(data))
   }
 
   const login = () => {
