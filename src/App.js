@@ -46,7 +46,8 @@ function App() {
     fetch('https://backend-auth.herokuapp.com/getUser', {
       credentials: 'include'
     })
-      .then(res => console.log(res))
+      .then(res => res.json())
+      .then(data => console.log(data))
   }
 
   return (
